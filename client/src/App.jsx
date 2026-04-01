@@ -3,13 +3,14 @@ import Sidebar from './components/Sidebar'
 import {Routes , Route, useLocation} from "react-router-dom"
 import ChatBox from './components/ChatBox'
 import Credits from "./pages/Credits"
-import { assets } from './assets/assets.js'
+
 import './assets/prism.css'
 import Loading from './pages/Loading'
 import Community from './pages/Community'
 import { useAppContext } from './context/AppContext'
 import Login from './pages/Login'
 import {Toaster} from "react-hot-toast"
+import { assets } from '../src/assets/assets.js'
 
 const App = () => {
 
