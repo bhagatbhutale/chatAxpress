@@ -21,33 +21,13 @@ app.use(express.json());
 
 // Routes
 app.get("/", (req, res ) => {
-    res.send("Server is Live...")
+    res.send("QuickGpt Website Server is Live...")
 })
 
 app.use("/api/user", userRouter)
 app.use("/api/chat", chatRouter)
 app.use("/api/message", messageRouter)
 app.use("/api/credit", creditRouter)
-
-// app.get("/test-ai", async (req, res) => {
-//   try {
-//     const response = await ai.models.generateContent({
-//       model: "gemini-2.5-flash",
-//       contents: "Explain how AI works in a few words",
-//     });
-
-//     res.json({
-//       success: true,
-//       reply: response.text,
-//     });
-//   } catch (error) {
-//     console.error("TEST AI ERROR:", error);
-//     res.status(500).json({
-//       success: false,
-//       message: error.message,
-//     });
-//   }
-// });
 
 
 

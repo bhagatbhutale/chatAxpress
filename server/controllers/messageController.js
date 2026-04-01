@@ -6,6 +6,7 @@ import openai from "../config/openAi.js";
 import imagekit from "../config/imageKit.js";
 // Text-Based AI Chat Message Controller
 export const textMessageController = async (req, res) => {
+  console.log("Text generate API Hit")
   try {
     const userId = req.user._id;
 
@@ -28,7 +29,8 @@ export const textMessageController = async (req, res) => {
     await chat.save();
 
     const { choices } = await openai.chat.completions.create({
-      model: "gemini-2.0-flash",
+      // model: "gemini-2.0-flash",
+      model: "gemini-3-flash-preview",
       messages: [{ role: "user", content: prompt }],
     });
 
@@ -37,6 +39,7 @@ export const textMessageController = async (req, res) => {
       timestamp: Date.now(),
       isImage: false,
     };
+
     res.json({ success: true, reply });
 
     // update the db
