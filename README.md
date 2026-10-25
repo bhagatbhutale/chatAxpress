@@ -116,17 +116,6 @@ AI-Chatbot/
 
 ## ⚙️ Environment Variables
 
-Create a `.env` file inside the backend/server directory:
-
-```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET=your_jwt_secret
-GEMINI_API_KEY=your_gemini_api_key
-```
-
-**Never commit your `.env` file or API keys to GitHub.**
-
 ## 💻 Installation
 
 ### 1. Clone the repository
